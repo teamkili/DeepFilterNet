@@ -1,3 +1,4 @@
+[project]
 name = "DeepFilterNet"
 version = "0.5.7-pre"
 
