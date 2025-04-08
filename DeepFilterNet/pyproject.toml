@@ -26,11 +26,11 @@ include = [
 deepfilterlib = { path = "../pyDF/" }
 deepfilterdataloader = { path = "../pyDF-data/", optional = true }
 python = ">=3.8,<4.0"
-numpy = ">=1.22,<2.0"
+numpy = ">=1.22"
 loguru = ">=0.5"
 appdirs = "^1.4"
 requests = "^2.27"
-packaging = ">=23,<25"
+packaging = ">=23"
 sympy = ">=1.6"
 soundfile = { version = ">=0.10,<0.13", optional = true }
 icecream = { version = ">=2,<3", optional = true }
@@ -51,13 +51,6 @@ deep-filter-py = "df.enhance:run"
 
 [tool.poetry.dev-dependencies]
 poethepoet = "^0.26"
-
-[tool.poe.tasks]
-install-torch-cuda11 = "pip install torch==2.1+cu118 torchaudio==2.1 --extra-index-url https://download.pytorch.org/whl/cu118"
-install-torch-cuda12 = "pip install torch==2.1+cu121 torchaudio==2.1 --extra-index-url https://download.pytorch.org/whl/cu121"
-install-torch-cpu = "pip install torch==2.1+cpu torchaudio==2.1 --extra-index-url https://download.pytorch.org/whl/cpu"
-install-eval-utils = "python -m pip install -r requirements_eval.txt"
-install-dnsmos-utils = "python -m pip install -r requirements_dnsmos.txt"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
